@@ -1,3 +1,38 @@
+// Sidebar //
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+
+
+
+/*
+
+const toggler = document.querySelector('.bar_toggler');
+const bar    = document.querySelector('.bar');
+
+/*
+ * Toggles on and off the 'active' class on the menu
+ * and the toggler button.
+ */
+
+/*
+toggler.addEventListener('click', () => {
+  toggler.classList.toggle('active');
+  bar.classList.toggle('active');
+})
+
+
+//end sidebar // 
+
+*/
+
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -53,3 +88,8 @@ function newElement() {
     }
   }
 }
+
+
+// Create new habit item to track when clicking "add" button 
+
+

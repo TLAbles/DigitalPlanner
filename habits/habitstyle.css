@@ -1,0 +1,59 @@
+table 
+{
+  border: red;
+}
+
+
+
+}
+
+table,
+th,
+tbody,
+tr,
+ {
+  display: block;
+ 
+}
+table {
+  border-top: 1px solid #e8e8e8; /* optional */
+}
+th {
+justify-items: center;
+  background-color: orchid;
+
+.days {
+    red;
+}
+/*
+}
+tr:nth-child(odd) {
+  background-color: #f9f9f9; /* optional */
+}
+
+td {
+  position: center;
+  text-align: left;
+  padding: 7px 13px; /* optional */
+  padding-left: calc(50% + 13px); /* 50% is arbitrary, 13px is optional */
+  border: 1px solid black; /* optional */
+  border-top: none; /* optional */
+}
+
+
+  td:before {
+    content: attr(data-label);
+    position: absolute;
+    white-space: nowrap;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%; /* arbitrary */
+    text-align: center;
+    padding: 7px 13px; /* optional */
+    font-weight: 600; /* optional */
+    border-right: 1px solid #e8e8e8; /* optional */
+  }
+
+  */
+  */

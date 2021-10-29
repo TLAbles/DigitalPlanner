@@ -1,0 +1,90 @@
+
+
+
+/* ----------------HABIT TRACKER------------------*/
+
+/*
+#myHabit {
+  grid-area: header;
+}
+
+
+table 
+{
+  border: red;
+}
+
+
+table,
+tbody,
+tr,
+td {
+  display: block;
+ 
+}
+table {
+  border-top: 1px solid #e8e8e8; /* optional */
+}
+*/
+
+/*
+
+th {
+
+    background-image: linear-gradient(to bottom, #711b86, #00057a);
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    border-radius: 1.75rem;
+  }
+
+}
+tr:nth-child(odd) {
+  background-color: #f9f9f9; /* optional */
+}
+*/
+
+/*
+td {
+  position: relative;
+  text-align: center;
+  padding: 7px 13px; /* optional 
+  padding-left: calc(50% + 13px); /* 50% is arbitrary, 13px is optional 
+  border: 1px solid red; /* optional 
+  border-top: none; /* optional 
+}
+
+*/
+
+/*
+  td:before {
+    content: attr(data-label);
+    position: absolute;
+    white-space: nowrap;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 50%; /* arbitrary 
+    text-align: center;
+    padding: 7px 13px; /* optional 
+    font-weight: 600; /* optional 
+    border-right: 1px solid #e8e8e8; /* optional 
+  }
+
+
+.DoW {
+  grid-area: main;
+
+}
+.dailycheck
+grid-area: footer; 
+
+
+
+.container {
+  display: flex; 
+  gap: 0px 0px; 
+  border: solid 3px oldlace;
+  
+
+*/

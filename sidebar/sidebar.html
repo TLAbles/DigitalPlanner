@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav</title>
+    <link rel="stylesheet" href="sidebar.css">
+   
+<!-- Slide Menu-->
+<aside class="side-menu_container" [ngClass]="{'side-menu__container-active': showMenu}" (click)="toggleMenu()">
+    <nav class="slide-menu" [ngClass]="{'slide-menu-active': showMenu}" (click)="$event.stopImmediatePropagation();">
+        <section class="menu-header">
+            <span class="greeting__text">Welcome Back</span>
+            <div class="profile-image__container">
+                <img src="https://avatars3.githubusercontent.com/u/5658460?s=460&v=4" alt="profile-image"
+                     class="profile__image">
+            </div>
+           
+        </section>
+        <section class="menu-body">
+    
+        </section>
+        <section class="menu-footer">
+    
+        </section>
+    </nav>
+    </aside>
+    
+    <div class="root__container" >
+        <header [ngClass]="{'main__header-dark': darkModeActive}" class="main__header">
+    
+            <div class="left__section">
+              <svg (click)="toggleMenu()" class="hamburger__icon" id="Menu_Burger_Icon">
+                  <!-- hamburger icon svg code goes here-->  
+              </svg>
+    
+                <svg class="logo__icon">
+                  <!-- logo svg code goes here-->
+                </svg>
+    
+            </div>
+    
+            <h3 class="date__text">Today</h3>
+    
+    
+            <div class="mode-toggle__container">
+                <span class="mode-toggle__text">Light</span>
+    
+                <label class="toggle-button__container">
+                    <input (click)="modeToggleSwitch()" type="checkbox" class="mode-toggle__input" />
+                      <span [ngClass]="{'mode-toggle__bg-checked': darkModeActive}" class="mode-toggle__bg"></span>
+                      <span [ngClass]="{'mode-toggle__circle-checked': darkModeActive}" class="mode-toggle__circle"></span>
+                </label>
+    
+    
+                <span class="mode-toggle__text">Dark</span>
+            </div>
+    
+        </header>
+    
+        <!-- Main Content -->
+
+        <section class="weather__card" (click)="openDetails()" [ngClass]="{'weather__card-dark': darkMode}">
+            <!-- TODO: make the city name dynamic -->
+            <span class="city-name__text">Paris</span>
+              <div class="weather-icon__container" [ngSwitch]="true">
+          
+                <svg *ngSwitchCase="condition === 'Clouds'">
+                  </svg>
+          
+                  <svg *ngSwitchCase="condition === 'Rain' || condition === 'Drizzle'">
+                  </svg>
+          
+                  <svg *ngSwitchCase="condition === 'Storm'">
+                  </svg>
+          
+          
+                  <svg *ngSwitchCase="condition === 'Sunny' || condition === 'Clear'">
+                  </svg>
+          
+                <svg  *ngSwitchCase="condition === 'Fog'"></svg>
+              </div>
+              
+          </section>
+    
+    
+
+        <script src = "sidebar.js"></script>
+    </body>
+
+    </html>

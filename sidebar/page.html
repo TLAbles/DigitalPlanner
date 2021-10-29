@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav</title>
+    <link rel="stylesheet" href="page.css">
+
+</head>
+<body>
+
+    <!-- sidebar -->
+    <div class="heading"></div>
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  <div id="sidebarMenu">
+
+
+      <!--  to do list card -->
+    <div class="card">
+        <div id="myDIV" class="header">
+            <h2>To Do List</h2>
+            <input type="text" id="myInput" placeholder="What do I have to do?">
+            <span onclick="newElement()" class="addBtn">Add</span>
+          </div>
+          
+          <ul id="myUL">
+            <li>Do some stuff</li>
+            <li class="checked">Take a break</li>
+            <li>More stuff</li>
+            <li>and some things</li>
+            <li>Make a to do list</li>
+            <li>push to GitHub</li>
+            <li>Existential crisis</li>
+            <li>???</li>
+            <li>Success!</li>
+          </ul>
+          </div>
+        
+    
+  </div>
+
+<!--
+  <div id='habits' class="main center">
+    <div class="mainInner">
+      <div>PURE CSS SIDEBAR TOGGLE MENU</div>
+    </div>
+    <div class="mainInner">
+      <div>PURE CSS SIDEBAR TOGGLE MENU</div>
+    </div>
+    <div class="mainInner">
+      <div>PURE CSS SIDEBAR TOGGLE MENU</div>
+    </div>
+  </div>
+
+-->
+
+
+<script src="jsOTD.js"></script>
+ 
+</body>
+</html>

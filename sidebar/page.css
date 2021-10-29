@@ -1,0 +1,349 @@
+
+html, body {
+    overflow-x: hidden;
+    height: 100%;
+    overflow-y: scroll;
+}
+body {
+    background-image: linear-gradient(to bottom, #5ee7df, #66a6ff);
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif;
+}
+
+/* nav menu */ 
+.heading {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: none;
+    background-color: transparent;
+    position: fixed;
+    height: 60px!important;
+    overflow: hidden;
+    z-index: 10;
+}
+
+/*
+.main {
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    margin-top: 60px;
+}
+.mainInner{
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.mainInner div{
+    display:table-cell;
+    vertical-align: middle;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+}
+*/
+
+/*sidebar */
+
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: auto;
+    margin-top: 60px;
+    transform: translateX(-250px);
+    overflow-y: scroll;
+    transition: transform 250ms ease-in-out;
+    background: linear-gradient(180deg, #FC466B 0%, #3F5EFB 100%);
+}
+.sidebarMenuInner{
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+
+.sidebarMenuInner li{
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li span{
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.50);
+}
+.sidebarMenuInner li a{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+  
+
+}
+
+/*spinny bit nav icon */ 
+
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.sidebarIconToggle {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    top: 22px;
+    left: 15px;
+    height: 22px;
+    width: 22px;
+}
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+}
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+
+
+
+
+    /*
+====================
+Card Styling
+====================
+*/
+
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1);
+    justify-items: left;
+    padding: 1rem;
+    margin: 1rem;
+    width: 19rem;
+    height: auto;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 1.75rem;
+    animation: 1.25s ease-in-out 0ms 1 fadein;
+    background: linear-gradient(to top, #711B86, #00057A);
+    color: white;
+    box-sizing: content-box;
+    
+  }
+  
+      /*to do list styling */
+  
+    /* Remove margins and padding from the list */
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: flex-grow;
+      width: 100%;
+    
+      
+    }
+    
+    /* Style the list items */
+    ul li {
+      cursor: pointer;
+      position: relative;
+      padding: 1rem;
+      height: inherit;
+      background: #eee;
+      font-size: 18px;
+      transition: 0.2s;
+      color: #fff;
+      border-radius: 1.75rem;
+      text-align: center;
+  
+   
+      
+    
+    
+    
+      /* make the list items unselectable */
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    
+    /* Set all odd list items to a different color (zebra-stripes) */
+    ul li:nth-child(odd) {
+      background: #711b86;
+    }
+  
+    ul li:nth-child(even) {
+      background: #00057a;}
+    
+    /* Darker background-color on hover */
+   
+   /* ul li:hover {
+      background: #ddd;
+  
+    } */
+  
+  
+   /* Lighter background-color on hover */ 
+  
+  
+    ul li:hover:nth-child(odd) {
+      background: #d895e9;
+    }
+  
+    ul li:hover:nth-child(even) {
+      background: #8084ff;
+     
+    
+    }
+  
+    
+    /* When clicked on, add a background color and strike out text */
+    ul li.checked {
+      color: #000;
+      text-decoration: line-through;
+    }
+  
+    ul li.checked:nth-child(odd) {
+      background: #b290ff;
+    }
+  
+    ul li.checked:nth-child(even) {
+      background: #5f84ff;
+    }
+  
+    
+    /* Add a "checked" mark when clicked on */
+    ul li.checked::before {
+      content: '';
+      position: absolute;
+      border-color: #00ff9b;
+      border-style: solid;
+      border-width: 0 1px 2px 0;
+      top: 10px;
+      left: 16px;
+      transform: rotate(45deg);
+      height: 18px;
+      width: 7px;
+    }
+    
+    /* Style the close button */
+    .close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 12px 18px 12px 18px;
+    }
+    
+    .close:hover {
+      background-color: #00ff9b;
+      color:#000;
+      border-radius: 50%;
+    }
+    
+    /* Style the header */
+    .header {
+      background-image: linear-gradient(to bottom, #711b86, #00057a);
+      padding: 1rem;
+      color: white;
+      text-align: center;
+      border-radius: 1.75rem;
+    }
+    
+    /* Clear floats after the header */
+    .header:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Style the input */
+    input {
+      margin: 0;
+      border: none;
+      border-radius: 1.75rem 0 0 1.75rem;
+      width: 75%;
+      padding: 10px;
+      float: left;
+      font-size: 16px;
+    }
+    
+    /* Style the "Add" button */
+    .addBtn {
+      padding: 10px;
+      width: 25%;
+      background: #b290ff;
+      color: #000;
+      float: left;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 0 1.75rem 1.75rem 0;
+     
+    }
+    
+    .addBtn:hover {
+      background-color: #31feae;
