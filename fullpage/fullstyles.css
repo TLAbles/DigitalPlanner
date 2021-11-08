@@ -38,7 +38,7 @@ body {
 */
 
 
-.container {
+.main-container {
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -54,7 +54,7 @@ body {
     font-weight: 800;
     text-transform: uppercase;
     font-size: 16px;
-    color: red;
+    color: white;
     text-align: center;
     border: 2px solid red;
     
@@ -74,8 +74,196 @@ nav {
     grid-area: calendar;
     border: 1px yellow solid; 
     border-radius: 1.75rem;
-    padding-top: var(--main-padding);
+    display: flex;
+ 
 }
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+  html {
+    font-size: 62.5%;
+  }
+  /*
+  .container {
+    width: 100%;
+    height: 100vh;
+    background-color: #f9f9f9;
+    color: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  */
+
+
+  .cal {
+    flex: 1;
+    width:auto;
+    height: auto;
+    background-image: linear-gradient(to bottom, #711b86, #00057a, #711b86);
+    box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
+    border-radius: 5%;
+  }
+  
+  .month {
+    height: auto;
+    background-image: linear-gradient(to bottom #711b86, #00057a);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  }
+  
+  .month i {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #00ff9b;
+
+  }
+
+  
+  .month h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .month p {
+    font-size: 1.6rem;
+  }
+  
+  .weekdays {
+    width: 100%;
+    height: 5rem;
+    padding: 0 0.2rem;
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas: 
+    "weekdays weekdays weekdays weekdays weekdays weekdays weekdays"
+    ;
+    justify-content: space-around;
+  }
+  
+  .weekdays div {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  }
+  
+  .days {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 5;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas: 
+    "days days days days days days days"
+    "days days days days days days days"
+    "days days days days days days days"
+    "days days days days days days days"
+    "days days days days days days days"
+    ;
+    justify-content: space-around;
+    padding: 0.2rem;
+  }
+  
+  .days div {
+    font-size: 1.4rem;
+    margin: 0rem;
+    width: calc(40.2rem / 7);
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.5);
+    transition: background-color 0.2s;
+    padding-bottom: 0.5rem;
+  }
+  
+  .days div:hover:not(.today) {
+    background-color: transparent;
+    border: 0.2rem solid #00ff9b;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .prev-date,
+  .next-date {
+    opacity: 0.5;
+  }
+  
+  .today {
+    background-color: #711b86;
+    border:0.2rem solid #00ff9b ;
+    border-radius: 50%;
+    
+  }
+
+  /*  Event Stuff  */
+
+
+  /*
+.events-container {
+  overflow-y: scroll;
+  height: 100%;
+  float: bottom;
+  margin: 0px auto; 
+  font: 13px "Courier-New", Verdana, sans-serif; 
+  display: inline-block; 
+  padding: 0 10px;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.events-container:after{
+  clear:both;
+}
+.event-card {
+  padding: 20px 0;
+  width: 350px;
+  margin: 20px auto;
+  display: block;
+  background-image: linear-gradient(to bottom #00057a, #711b86);
+  border-left: 10px solid #00057a;
+  border-radius: 3px;
+  box-shadow: 3px 8px 16px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  -moz-box-shadow: 3px 8px 16px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  -webkit-box-shadow: 3px 8px 16px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.event-count, .event-name, .event-cancelled {
+  display: inline;
+  padding: 0 10px;
+  font-size: 1rem;
+}
+.event-count {
+  color: #00ff9b;
+  text-align: right;
+}
+.event-name {
+  padding-right:0;
+  text-align: left;
+}
+.event-cancelled {
+  color: darkgrey;
+  text-align: right;
+}
+
+*/ 
+
 
 #toDo {
   display: flex;
@@ -86,6 +274,151 @@ nav {
     border-radius: 1.75rem;
     padding-top: var(--main-padding);
 }
+
+.toDoList {
+  flex: 1; 
+  
+}
+
+/*to do list styling */
+  
+    /* Remove margins and padding from the list */
+   ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      overflow: auto;
+      display: flex-grow;
+      width: 100%;
+  
+    }
+    
+    /* Style the list items */
+    
+    
+    ul li {
+      cursor: pointer;
+      position: relative;
+      padding: .5rem;
+      height: inherit;
+      background: #eee;
+      font-size: 16px;
+      transition: 0.2s;
+      color: #fff;
+      border-radius: 1.75rem;
+      text-align: center;
+  
+    
+      /* make the list items unselectable */
+     -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  
+
+    /* Set all odd list items to a different color (zebra-stripes) */
+   ul li:nth-child(odd) {
+      background: #711b86;
+    }
+  
+    ul li:nth-child(even) {
+      background: #00057a;}
+    
+  
+   /* Lighter background-color on hover */ 
+  
+  
+    ul li:hover:nth-child(odd) {
+      background: #d895e9;
+    }
+  
+    ul li:hover:nth-child(even) {
+      background: #8084ff;
+     
+    }
+
+    /* When clicked on, add a background color and strike out text */
+   ul li.checked {
+      color: #000;
+      text-decoration: line-through;
+    }
+  
+    ul li.checked:nth-child(odd) {
+      background: #b290ff;
+    }
+  
+    ul li.checked:nth-child(even) {
+      background: #5f84ff;
+    }
+ 
+    
+    /* Add a "checked" mark when clicked on */
+
+    ul li.checked::before {
+      content: '';
+      position: absolute;
+      border-color: #00ff9b;
+      border-style: solid;
+      border-width: 0 1px 2px 0;
+      top: 10px;
+      left: 16px;
+      transform: rotate(45deg);
+      height: 18px;
+      width: 7px;
+    }
+  
+    /* Style the close button */
+    
+    .close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 12px 18px 12px 18px;
+    }
+    
+    .close:hover {
+      background-color: #00ff9b;
+      color:#000;
+      border-radius: 50%;
+    }
+
+
+    /* Style the input */
+   
+    input { 
+    display: inline-block;
+      
+      margin: 0;
+      border: none;
+      border-radius: 1.75rem 0 0 1.75rem;
+      width: 75%;
+      padding: 10px;
+      float: left;
+      font-size: 16px;
+    }
+    
+    /* Style the "Add" button */
+  
+    .addBtn {
+
+      padding: 10px;
+      width: 25%;
+      background: #b290ff;
+      color: #000;
+      float: left;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 0 1.75rem 1.75rem 0;
+     
+    }
+    
+    .addBtn:hover {
+      background-color: #31feae;
+    }
+
 
 #habits {
     display: flex;
@@ -395,7 +728,7 @@ nav {
   */
 
  @media screen and (max-width: 968px) {
-        .container {
+        .main-container {
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 4fr repeat(7, 1fr)2.5fr 1fr;
             grid-template-areas: 
@@ -416,14 +749,14 @@ nav {
 
     @media screen and (max-width: 600px) {
 
-        .container {
+        .main-container {
             height: 100vh;
             display: grid;
             grid-gap: 0.2rem;
             font-weight: 800;
             text-transform: uppercase;
             font-size: 16px;
-            color: red;
+            color: white;
             text-align: center;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: repeat(2, 1fr);
@@ -449,7 +782,7 @@ nav {
 
  @media screen and (min-width: 768px) {
 
-    .container 
+    .main-container 
         display: grid;
         height: 100vh;
           grid-gap: 0.2rem;
@@ -475,7 +808,7 @@ nav {
 /*
 @media screen and (min-width: 600px) {
 
-        .container {
+        .main-container {
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr;
             grid-template-areas: 

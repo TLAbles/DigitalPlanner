@@ -4,23 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page</title>
+    <title>Planner</title>
     <link rel="stylesheet" href="fullstyles.css">
+    <link rel= "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    
 
 </head>
 
 
 <body>
 
-    <div class="container">
-        <div id="calendar">Calendar</div>
-        <div id="toDo"> To Do
-            
+    <div class="main-container">
+        <div id="calendar">
+          <div class="cal">
+            <div class="month">
+              <i class="fas fa-angle-left prev"></i>
+              <div class="date">
+                <h1></h1>
+                <p></p>
+              </div>
+              <i class="fas fa-angle-right next"></i>
+            </div>
+            <div class="weekdays">
+          
+              <div>Mon</div>
+              <div>Tue</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div>Fri</div>
+              <div>Sat</div>
+                <div>Sun</div>
+            </div>
+            <div class="days"></div>
+          </div>
 
 
+        </div>
+
+        <div id="toDo">
+          <div class="toDoList">
+            <h2>To Do List</h2>
+            <input type="text" id="myInput" placeholder="What do I have to do?">
+            <span onclick="newElement()" class="addBtn">Add</span>
+          
+          <ul id="myUL">
+            <li>Do some stuff</li>
+            <li class="checked">Take a break</li>
+            <li>More stuff</li>
+            <li>and some things</li>
+            <li>Make a to do list</li>
+            <li>push to GitHub</li>
+            <li>Existential crisis</li>
+            <li>???</li>
+            <li>Success!</li>
+          </ul>
+          </div>
+          </div>
+          
             <!--  To Do List   -->
-
-           <!--
+<!--
+           
             <div class= "card-container">
                 <section class="card">
               <div id="myDIV" class="header">
@@ -40,12 +83,12 @@
                   <li>???</li>
                   <li>Success!</li>
                 </ul>
-                </section> -->
+                </section> 
 
 
         </div>
         
-        
+      -->
     
         <div id="habits"> Habits
 
@@ -166,9 +209,6 @@
     </div>
 </div>
    
-
-
-
-<script src="jsOTD.js"></script>
+<script src="fullpage.js"></script>
 </body>
 </html>
