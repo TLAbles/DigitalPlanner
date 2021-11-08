@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planner</title>
+    <link rel="stylesheet" href="fullstyles.css">
+    <link rel= "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+    
+
+</head>
+
+
+<body>
+
+    <div class="main-container">
+        <div id="calendar">
+          <div class="cal">
+            <div class="month">
+              <i class="fas fa-angle-left prev"></i>
+              <div class="date">
+                <h1></h1>
+                <p></p>
+              </div>
+              <i class="fas fa-angle-right next"></i>
+            </div>
+            <div class="weekdays">
+          
+              <div>Mon</div>
+              <div>Tue</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div>Fri</div>
+              <div>Sat</div>
+                <div>Sun</div>
+            </div>
+            <div class="days"></div>
+          </div>
+
+
+        </div>
+
+        <div id="toDo">
+          <div class="toDoList">
+            <h2>To Do List</h2>
+            <input type="text" id="myInput" placeholder="What do I have to do?">
+            <span onclick="newElement()" class="addBtn">Add</span>
+          
+          <ul id="myUL">
+            <li>Do some stuff</li>
+            <li class="checked">Take a break</li>
+            <li>More stuff</li>
+            <li>and some things</li>
+            <li>Make a to do list</li>
+            <li>push to GitHub</li>
+            <li>Existential crisis</li>
+            <li>???</li>
+            <li>Success!</li>
+          </ul>
+          </div>
+          </div>
+          
+            <!--  To Do List   -->
+<!--
+           
+            <div class= "card-container">
+                <section class="card">
+              <div id="myDIV" class="header">
+                  <h2>To Do List</h2>
+                  <input type="text" id="myInput" placeholder="What do I have to do?">
+                  <span onclick="newElement()" class="addBtn">Add</span>
+                </div>
+                
+                <ul id="myUL">
+                  <li>Do some stuff</li>
+                  <li class="checked">Take a break</li>
+                  <li>More stuff</li>
+                  <li>and some things</li>
+                  <li>Make a to do list</li>
+                  <li>push to GitHub</li>
+                  <li>Existential crisis</li>
+                  <li>???</li>
+                  <li>Success!</li>
+                </ul>
+                </section> 
+
+
+        </div>
+        
+      -->
+    
+        <div id="habits"> Habits
+
+<!--HABIT TRACKER -->
+<!--
+<section class="card">
+    <div class ="table-responsive">
+      <div class ="header" id="HabitTitle">
+     <h2>Habit Tracker</h2>
+      -->
+     <!--
+     <input type="text" id="myHabit" placeholder= "New Habit"> 
+           <span onclick="GenerateHabit()" class="addBtn">Add</span>
+    -->
+
+           
+<!--
+      <table id="habittable">
+     <thead>
+       <tr> <th colspan="7"><input type="text" id="myHabit" placeholder= "New Habit"> 
+           <span onclick="GenerateHabit()" class="addBtn">Add</span></th> </tr>
+      </thead>
+
+    <tr class= "habitDoW"> 
+        <td class ="Dow">M</td>
+        <td>T</td>
+        <td>W</td>
+        <td>T</td>
+        <td>F</td>
+        <td>S</td>
+        <td>S</td>
+        </tr>
+      <tr class = "dailycheck"> 
+       <td> <input type ="checkbox" id="habitDay"> </td>
+       <td> <input type ="checkbox" id="habitDay"> </td>
+       <td> <input type ="checkbox" id="habitDay"> </td>
+       <td> <input type ="checkbox" id="habitDay"> </td>
+       <td> <input type ="checkbox" id="habitDay"> </td>
+       <td> <input type ="checkbox" id="habitDay"> </td>
+       <td> <input type ="checkbox" id="habitDay"> </td>
+        </tr>
+</table>
+     
+       </div> 
+        
+       <div class ="table-responsive">
+     
+    
+      <table id="habittable">
+     <thead>
+       <tr> <th colspan="7"><input type="text" id="myHabit" placeholder= "New Habit"> 
+           <span onclick="GenerateHabit()" class="addBtn">Add</span></th> </tr>
+      </thead>
+
+    <tr class= "habitDoW"> 
+        <td class ="Dow">M</td>
+        <td>T</td>
+        <td>W</td>
+        <td>T</td>
+        <td>F</td>
+        <td>S</td>
+        <td>S</td>
+        </tr>
+      <tr class = "dailycheck"> 
+       <td> <input type ="checkbox" id="habitDay"> </td>
+       <td> <input type ="checkbox" id="habitDay"> </td>
+       <td> <input type ="checkbox" id="habitDay"> </td>
+       <td> <input type ="checkbox" id="habitDay"> </td>
+       <td> <input type ="checkbox" id="habitDay"> </td>
+       <td> <input type ="checkbox" id="habitDay"> </td>
+       <td> <input type ="checkbox" id="habitDay"> </td>
+        </tr>
+</table>
+     
+       </div> 
+      
+     <div class ="table-responsive">
+      <table id="habittable">
+     <thead>
+       <tr> <th colspan="7"><input type="text" id="myHabit" placeholder= "New Habit"> 
+           <span onclick="GenerateHabit()" class="addBtn">Add</span></th> </tr>
+      </thead>
+
+    <tr class= "habitDoW"> 
+        <td class ="Dow">M</td>
+        <td>T</td>
+        <td>W</td>
+        <td>T</td>
+        <td>F</td>
+        <td>S</td>
+        <td>S</td>
+        </tr>
+      <tr class = "dailycheck"> 
+       <td> <input type ="checkbox" id="habitDay"> </td>
+       <td> <input type ="checkbox" id="habitDay"> </td>
+       <td> <input type ="checkbox" id="habitDay"> </td>
+       <td> <input type ="checkbox" id="habitDay"> </td>
+       <td> <input type ="checkbox" id="habitDay"> </td>
+       <td> <input type ="checkbox" id="habitDay"> </td>
+       <td> <input type ="checkbox" id="habitDay"> </td>
+        </tr>
+</table>
+     
+       </div> 
+
+
+        </section>
+    -->
+        </div> 
+        <div id="Monday">Monday</div>
+        <div id="Tuesday">Tuesday</div>
+        <div id="Wednesday">Wednesday</div>
+        <div id="Thursday">Thursday</div>
+        <div id="Friday">Friday</div>
+        <div id="Saturday">Saturday</div>
+        <div id="Sunday">Sunday</div>
+        <div id="notes">Notes</div>
+    </div>
+</div>
+   
+<script src="fullpage.js"></script>
+</body>
+</html>
