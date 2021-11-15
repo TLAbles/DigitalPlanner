@@ -196,8 +196,6 @@ function listHabits(habit = [], habitsList) {
     .join("");
 }
 
-
-
 // Mark habits as completed // 
 
 function markCompleted(e) {
@@ -237,99 +235,65 @@ habitsList.addEventListener("click", deleteHabit);
 
 listHabits(habits, habitsList);
 
+/*
+// ---------------MODAL ---------------------//
+ 
+const modalButton = document.getElementsByClassName("modalButton");
+const modalArray = Array.from(modalButton).entries();
+const modals = document.getElementsByClassName("modal");
 
+// Then use `for...of`-loop with the index of each item in `triggerArray` for listening to a click event which toggles each modal to open and close
+for (let [index, modalButton] of modalArray) {
+  const toggleModal => () {
+    modals[index].classList.toggle("show-modal");
+  };
+  trigger.addEventListener("click", toggleModal);
+ }
+*/
+/*
+const btns = document.querySelectorAll("[dat-target");
+
+
+btns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.querySelector(btn.dataset.target).classList.add("active");
+  }
+
+  );
+});
 
 /* --------------- Monday ----------------- */
+
 // Get the modal
-var modal = document.getElementById("monModal");
+var monday_modal = document.getElementById("monModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("monBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var mon_btn = document.getElementById("mon_write_btn");
 
 // When the user clicks on the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+mon_btn.onclick = function() {
+  monday_modal.style.display = "block";
 }
 
 //Create item from modal submit //
 
 function monFunction() {
-  var x = document.getElementById("MonNotes").value;
-  document.getElementById("Mondaytext").innerHTML = x;
+  var MonNotesDiv = document.getElementById("MonNotes").value;
+  document.getElementById("Mondaytext").innerHTML = MonNotesDiv;
 }
 
-/*
-
-function monFunction() {
-  var ul = document.getElementById("MonItems");
-  var li= document.createElement("li");
-  li.appendChild(document.createTextNode(""));
-  ul.appendChild(li);
-  document.getElementById("Mondaytext").innerHTML = x;
-}
-
-// Create a "close" button and add it to each day entry//
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-
-// Click on a close button to hide the current list item //
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-} 
-
+ 
 /* --------------- Tuesday ----------------- */
 
 // Get the modal
-var modal = document.getElementById("tueModal");
+var tuesday_modal = document.getElementById("tueModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("tueBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var tue_btn = document.getElementById("tue_write_btn");
 
 // When the user clicks on the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+tue_btn.onclick = function() {
+  tuesday_modal.style.display = "block";
 }
 
 //Create item from modal submit //
@@ -341,215 +305,160 @@ function tueFunction() {
 
 
 /* --------------- Wednesday ----------------- */
+
 // Get the modal
-var modal = document.getElementById("wedModal");
+var wednesday_modal = document.getElementById("wedModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("wedBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var wed_btn = document.getElementById("wed_write_btn");
 
 // When the user clicks on the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+wed_btn.onclick = function() {
+  wednesday_modal.style.display = "block";
 }
 
 //Create item from modal submit //
 
 function wedFunction() {
-  var y = document.getElementById("WedNotes").value;
-  document.getElementById("Wednesdaytext").innerHTML = y;
+  var WedNotesDiv = document.getElementById("WedNotes").value;
+  document.getElementById("Wednesdaytext").innerHTML = WedNotesDiv;
 }
 
-
+ 
 /* --------------- Thursday ----------------- */
+
 // Get the modal
-var modal = document.getElementById("thModal");
+var thursday_modal = document.getElementById("thModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("thBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var th_btn = document.getElementById("th_write_btn");
 
 // When the user clicks on the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+th_btn.onclick = function() {
+  thursday_modal.style.display = "block";
 }
 
 //Create item from modal submit //
 
 function thFunction() {
-  var x = document.getElementById("ThNotes").value;
-  document.getElementById("Thursdaytext").innerHTML = x;
+  var ThNotesDiv = document.getElementById("ThNotes").value;
+  document.getElementById("Thursdaytext").innerHTML = ThNotesDiv;
 }
+
 
 /* --------------- Friday ----------------- */
+
 // Get the modal
-var modal = document.getElementById("friModal");
+var friday_modal = document.getElementById("friModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("friBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var fri_btn = document.getElementById("fri_write_btn");
 
 // When the user clicks on the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+fri_btn.onclick = function() {
+  friday_modal.style.display = "block";
 }
 
 //Create item from modal submit //
 
 function friFunction() {
-  var x = document.getElementById("FriNotes").value;
-  document.getElementById("Fridaytext").innerHTML = x;
+  var FriNotesDiv = document.getElementById("FriNotes").value;
+  document.getElementById("Fridaytext").innerHTML = FriNotesDiv;
 }
 
-
+ 
 /* --------------- Saturday ----------------- */
+
 // Get the modal
-var modal = document.getElementById("satModal");
+var saturday_modal = document.getElementById("satModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("satBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var sat_btn = document.getElementById("sat_write_btn");
 
 // When the user clicks on the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+sat_btn.onclick = function() {
+  saturday_modal.style.display = "block";
 }
 
 //Create item from modal submit //
 
 function satFunction() {
-  var x = document.getElementById("SatNotes").value;
-  document.getElementById("Saturdaytext").innerHTML = x;
+  var SatNotesDiv = document.getElementById("SatNotes").value;
+  document.getElementById("Saturdaytext").innerHTML = SatNotesDiv;
 }
-
 
 
 /* --------------- Sunday ----------------- */
+
 // Get the modal
-var modal = document.getElementById("sunModal");
+var sunday_modal = document.getElementById("sunModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("sunBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var sun_btn = document.getElementById("sun_write_btn");
 
 // When the user clicks on the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+sun_btn.onclick = function() {
+  sunday_modal.style.display = "block";
 }
 
 //Create item from modal submit //
 
 function sunFunction() {
-  var x = document.getElementById("SunNotes").value;
-  document.getElementById("Sundaytext").innerHTML = x;
+  var SunNotesDiv = document.getElementById("SunNotes").value;
+  document.getElementById("Sundaytext").innerHTML = SunNotesDiv;
 }
 
+ 
 /* --------------- Notes ----------------- */
 
 
 // Get the modal
-var modal = document.getElementById("notesModal");
+var note_modal = document.getElementById("noteModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("notesBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var note_btn = document.getElementById("note_write_btn");
 
 // When the user clicks on the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+note_btn.onclick = function() {
+  note_modal.style.display = "block";
 }
 
 //Create item from modal submit //
 
-function notesFunction() {
-  var x = document.getElementById("notesNotes").value;
-  document.getElementById("notestext").innerHTML = x;
+function noteFunction() {
+  var NoteNotesDiv = document.getElementById("NoteNotes").value;
+  document.getElementById("Notetext").innerHTML = NoteNotesDiv;
 }
 
 
+// When the user clicks anywhere outside of the modal, close it
 
+window.onclick = function(event) {
+  if (event.target == monday_modal) {
+    monday_modal.style.display = "none";
+  }
+  else if (event.target == tuesday_modal) {
+    tuesday_modal.style.display = "none";
+  }
+ 
+  else if (event.target == wednesday_modal) {
+    wednesday_modal.style.display = "none";
+  }
+  else if (event.target == thursday_modal) {
+    thursday_modal.style.display = "none";
+  }
 
+  else if (event.target == friday_modal) {
+    friday_modal.style.display = "none";
+  }
+ 
+  else if (event.target == saturday_modal) {
+    saturday_modal.style.display = "none";
+  }
+  else if (event.target == sunday_modal) {
+    sunday_modal.style.display = "none";
+  }
+  else if (event.target == note_modal) {
+    note_modal.style.display = "none";
+  }
+}

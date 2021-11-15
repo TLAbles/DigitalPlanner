@@ -42,7 +42,7 @@
     <button class="button" id="add-button">Add Event</button>
   
 <div class="events-container">
-
+x
 <div class="dialog" id="dialog">
     <h2 class="dialog-header"> Add New Event </h2>
     <form class="form" id="form">
@@ -86,16 +86,48 @@
     
         <div id="habits"> 
           <div class="habitTracker">
-            <h2>HABITS</h2>
-            <p></p>
+            <h2>Habits</h2>
+            <br>
+
+
+            <!-- checkbox style  -->
+
+            <!--
+<div class= "habitContainer">
+<h3 class="habitTitle">something</h3>
+<div class="Day-row">
+  <div class="grid-cell">M</div>
+  <div class="grid-cell">T</div>
+  <div class="grid-cell">W</div>
+  <div class="grid-cell">Th</div>
+  <div class="grid-cell">F</div>
+  <div class="grid-cell">S</div>
+  <div class="grid-cell">S</div>
+</div>
+<div class="check-row">
+  <div class="grid-cell"> <input type="checkbox" checked id="checkbox" /> <label for="checkbox"></label></div>
+  <div class="grid-cell"> <input type="checkbox" checked id="checkbox" /> <label for="checkbox"></label></div>
+  <div class="grid-cell"> <input type="checkbox" checked id="checkbox" /> <label for="checkbox"></label></div>
+  <div class="grid-cell"> <input type="checkbox" checked id="checkbox" /> <label for="checkbox"></label></div>
+  <div class="grid-cell"> <input type="checkbox" checked id="checkbox" /> <label for="checkbox"></label></div>
+  <div class="grid-cell"> <input type="checkbox" checked id="checkbox" /> <label for="checkbox"></label></div>
+  <div class="grid-cell"> <input type="checkbox" checked id="checkbox" /> <label for="checkbox"></label></div>
+</div>
+
+</div>
+-->
+
+
+            
             <form class="add-habit">
               <input class="habit" type="text" name="habit" placeholder="Enter New Habit" required/>
               <input type="number" class= "reps" name="reps" placeholder="# of Repetitions"min="1" required/>
-              <input type="submit" class="submit" value="Add Habit" />
+              <input type="submit" class="submit" value="+ Add Habit" />
             </form>
             <ul class="habitsList">
               <li>Let's GO!</li>
             </ul>
+             
           </div>
           </div>
         
@@ -106,17 +138,14 @@
  <!-----------------------------------Monday Box --------------------------------------->
  <div id="Monday">Monday
   <div class="MondayBox">
-<br>
-<!--------------------Monday Modal button ----------------------------->
-<button type="button" class="modalButton" id="monBtn" data-toggle="modal" data-target="#mondayModal">What's happening on Monday?</button>
 
-<!------------------------Monday Modal box------------------------------->
+<!-------------------- Modal button ----------------------------->
+<button type="button" class="modalButton" id="mon_write_btn" data-toggle="modal" data-target="#mondayModal">What's happening on Monday?</button>
+
+<!------------------------ Modal box------------------------------->
 <div class="modal fade" id="monModal" aria-labelledby="monModalLabel" aria-hidden="true">
 <div class="monday-dialog-box ">
 <div class="modal-content">
-   <div class="modal-header">
-      <h4 class="monday-modal-title" id="mondayModalLabel">Monday Stuff</h4>     
-   </div>
   <div class="modal-body"> 
 
 <label for="MonNotes">Notes for Monday</label>
@@ -125,7 +154,7 @@
 
   </div>
    <div class="modal-footer">
-       <button type="button" class="saveBtn" onclick="monFunction()">Save changes</button>
+       <button type="button" class="saveBtn" id="Monbtn" onclick="monFunction()">Save changes</button>
   </div>
 </div>
 </div>
@@ -133,22 +162,20 @@
 <p id="Mondaytext"></p>
 </div>
 </div>
+
         
-       
+     <!-- this is the end of monday -->
  <!-----------------------------------Tuesday Box --------------------------------------->
  <div id="Tuesday">Tuesday
   <div class="TuesdayBox">
-<br>
+
 <!-------------------- Modal button ----------------------------->
-<button type="button" class="modalButton" id="tueBtn" data-toggle="modal" data-target="#tuesdayModal">What's happening on Tuesday?</button>
+<button type="button" class="modalButton" id="tue_write_btn" data-toggle="modal" data-target="#tuesdayModal">What's happening on Tuesday?</button>
 
 <!------------------------ Modal box------------------------------->
 <div class="modal fade" id="tueModal" aria-labelledby="tueModalLabel" aria-hidden="true">
 <div class="tuesday-dialog-box ">
 <div class="modal-content">
-   <div class="modal-header">
-      <h4 class="tuesday-modal-title" id="tuesdayModalLabel">Tuesday Stuff</h4>     
-   </div>
   <div class="modal-body"> 
 
 <label for="TueNotes">Notes for Tuesday</label>
@@ -166,20 +193,19 @@
 </div>
 </div>
 
+
  <!-----------------------------------Wednesday Box --------------------------------------->
+
  <div id="Wednesday">Wednesday
   <div class="WednesdayBox">
-<br>
+
 <!-------------------- Modal button ----------------------------->
-<button type="button" class="modalButton" id="wedBtn" data-toggle="modal" data-target="#wednesdayModal">What's happening on Wednesday?</button>
+<button type="button" class="modalButton" id="wed_write_btn" data-toggle="modal" data-target="#wednesdayModal">What's happening on Wednesday?</button>
 
 <!------------------------ Modal box------------------------------->
-<div class="modal fade" id="monModal" aria-labelledby="wedModalLabel" aria-hidden="true">
+<div class="modal fade" id="wedModal" aria-labelledby="wedModalLabel" aria-hidden="true">
 <div class="wednesday-dialog-box ">
 <div class="modal-content">
-   <div class="modal-header">
-      <h4 class="wednesday-modal-title" id="wednesdayModalLabel">Wednesday Stuff</h4>     
-   </div>
   <div class="modal-body"> 
 
 <label for="WedNotes">Notes for Wednesday</label>
@@ -188,7 +214,7 @@
 
   </div>
    <div class="modal-footer">
-       <button type="button" class="saveBtn" onclick="wedFunction()">Save changes</button>
+       <button type="button" class="saveBtn" id="Wedbtn" onclick="wedFunction()">Save changes</button>
   </div>
 </div>
 </div>
@@ -197,20 +223,18 @@
 </div>
 </div>
 
+
  <!-----------------------------------Thursday Box --------------------------------------->
  <div id="Thursday">Thursday
   <div class="ThursdayBox">
-<br>
+
 <!-------------------- Modal button ----------------------------->
-<button type="button" class="modalButton" id="thBtn" data-toggle="modal" data-target="#thursdayModal">What's happening on Thursday?</button>
+<button type="button" class="modalButton" id="th_write_btn" data-toggle="modal" data-target="#thursdayModal">What's happening on Thursday?</button>
 
 <!------------------------ Modal box------------------------------->
 <div class="modal fade" id="thModal" aria-labelledby="thModalLabel" aria-hidden="true">
 <div class="thursday-dialog-box ">
 <div class="modal-content">
-   <div class="modal-header">
-      <h4 class="thursday-modal-title" id="thursdayModalLabel">Thursday Stuff</h4>     
-   </div>
   <div class="modal-body"> 
 
 <label for="ThNotes">Notes for Thursday</label>
@@ -219,7 +243,7 @@
 
   </div>
    <div class="modal-footer">
-       <button type="button" class="saveBtn" onclick="thFunction()">Save changes</button>
+       <button type="button" class="saveBtn" id="Thbtn" onclick="thFunction()">Save changes</button>
   </div>
 </div>
 </div>
@@ -227,20 +251,19 @@
 <p id="Thursdaytext"></p>
 </div>
 </div>
+
+
  <!-----------------------------------Friday Box --------------------------------------->
  <div id="Friday">Friday
   <div class="FridayBox">
-<br>
+
 <!-------------------- Modal button ----------------------------->
-<button type="button" class="modalButton" id="FriBtn" data-toggle="modal" data-target="#fridayModal">What's happening on Friday?</button>
+<button type="button" class="modalButton" id="fri_write_btn" data-toggle="modal" data-target="#fridayModal">What's happening on Friday?</button>
 
 <!------------------------ Modal box------------------------------->
 <div class="modal fade" id="friModal" aria-labelledby="friModalLabel" aria-hidden="true">
 <div class="friday-dialog-box ">
 <div class="modal-content">
-   <div class="modal-header">
-      <h4 class="friday-modal-title" id="fridayModalLabel">Friday Stuff</h4>     
-   </div>
   <div class="modal-body"> 
 
 <label for="FriNotes">Notes for Friday</label>
@@ -249,7 +272,7 @@
 
   </div>
    <div class="modal-footer">
-       <button type="button" class="saveBtn" onclick="friFunction()">Save changes</button>
+       <button type="button" class="saveBtn" id= "Fribtn" onclick="friFunction()">Save changes</button>
   </div>
 </div>
 </div>
@@ -261,17 +284,14 @@
     <!-----------------------------------Saturday Box --------------------------------------->
     <div id="Saturday">Saturday
       <div class="SaturdayBox">
-<br>
+
 <!-------------------- Modal button ----------------------------->
-<button type="button" class="modalButton" id="satBtn" data-toggle="modal" data-target="#saturdayModal">What's happening on Saturday?</button>
+<button type="button" class="modalButton" id="sat_write_btn" data-toggle="modal" data-target="#saturdayModal">What's happening on Saturday?</button>
 
 <!------------------------ Modal box------------------------------->
 <div class="modal fade" id="satModal" aria-labelledby="satModalLabel" aria-hidden="true">
 <div class="saturday-dialog-box ">
    <div class="modal-content">
-       <div class="modal-header">
-          <h4 class="saturday-modal-title" id="saturdayModalLabel">Saturday Stuff</h4>     
-       </div>
       <div class="modal-body"> 
 
 <label for="SatNotes">Notes for Saturday</label>
@@ -280,7 +300,7 @@
 
       </div>
        <div class="modal-footer">
-           <button type="button" class="saveBtn" onclick="satFunction()">Save changes</button>
+           <button type="button" class="saveBtn" id="Satbtn" onclick="satFunction()">Save changes</button>
       </div>
    </div>
 </div>
@@ -292,26 +312,24 @@
     <!-----------------------------------Sunday Box --------------------------------------->
     <div id="Sunday">Sunday
       <div class="SundayBox">
-<br>
+
 <!-------------------- Modal button ----------------------------->
-<button type="button" class="modalButton" id="sunBtn" data-toggle="modal" data-target="#sundayModal">What's happening on Sunday?</button>
+<button type="button" class="modalButton" id="sun_write_btn" data-toggle="modal" data-target="#sundayModal">What's happening on Sunday?</button>
+
 
 <!------------------------ Modal box------------------------------->
 <div class="modal fade" id="sunModal" aria-labelledby="sunModalLabel" aria-hidden="true">
 <div class="sunday-dialog-box ">
    <div class="modal-content">
-       <div class="modal-header">
-          <h4 class="sunday-modal-title" id="sundayModalLabel">Sunday Stuff</h4>     
-       </div>
       <div class="modal-body"> 
 
-<label for="SunNotes">Notes for Sunday</label>
+        <label for="SunNotes">Notes for Sunday</label>
 <textarea id="SunNotes" name="SunNotes" rows="" cols="">
  </textarea>
 
       </div>
        <div class="modal-footer">
-           <button type="button" class="saveBtn" onclick="sunFunction()">Save changes</button>
+           <button type="button" class="saveBtn" id="Sunbtn" onclick="sunFunction()">Save changes</button>
       </div>
    </div>
 </div>
@@ -321,42 +339,34 @@
 </div>
 
  <!-----------------------------------Notes Box --------------------------------------->
- <div id="notes">Notes
+ <div id="Notes">Notes
   <div class="NotesBox">
-<br>
-<div id="type-note-text">
-
- 
 
 <!-------------------- Modal button ----------------------------->
+<button type="button" class="modalButton" id="note_write_btn" data-toggle="modal" data-target="#noteModal">Anything else?</button>
 
-<button type="button" class="modalButton" id="notesBtn" data-toggle="modal" data-target="#notesModal">Anything Else?</button>
+
 <!------------------------ Modal box------------------------------->
-
-<div class="modal fade" id="notesModal" aria-labelledby="notesModalLabel" aria-hidden="true">
-<div class="notes-dialog-box ">
+<div class="modal fade" id="noteModal" aria-labelledby="noteModalLabel" aria-hidden="true">
+<div class="note-dialog-box ">
 <div class="modal-content">
-   <div class="modal-header">
-      <h4 class="notes-modal-title" id="mondayModalLabel">Other Stuff</h4>     
-   </div>
   <div class="modal-body"> 
 
-<label for="notesNotes">Notes</label>
-<textarea id="notesNotes" name="notesNotes" rows="" cols="">
+    <label for="NoteNotes">Other Notes</label>
+<textarea id="NoteNotes" name="NoteNotes" rows="" cols="">
 </textarea>
 
   </div>
    <div class="modal-footer">
-       <button type="button" class="saveBtn" onclick="notesFunction()">Save changes</button>
+       <button type="button" class="saveBtn" id="Notebtn" onclick="noteFunction()">Save changes</button>
   </div>
 </div>
 </div>
 </div> 
-<p id="notestext"></p>
-
+<p id="Notetext"></p>
 </div>
 </div>
-</div>
+ 
 
     </div>
 
