@@ -152,7 +152,7 @@ function newElement() {
 
 /* -----------------------------------HABIT TRACKER---------------------------------*/ 
 
-
+/*
 const addHabits = document.querySelector(".add-habit");
 const habitsList = document.querySelector('.habitsList');
 const habits = JSON.parse(localStorage.getItem("habits")) || [];
@@ -235,32 +235,7 @@ habitsList.addEventListener("click", deleteHabit);
 
 listHabits(habits, habitsList);
 
-/*
-// ---------------MODAL ---------------------//
- 
-const modalButton = document.getElementsByClassName("modalButton");
-const modalArray = Array.from(modalButton).entries();
-const modals = document.getElementsByClassName("modal");
-
-// Then use `for...of`-loop with the index of each item in `triggerArray` for listening to a click event which toggles each modal to open and close
-for (let [index, modalButton] of modalArray) {
-  const toggleModal => () {
-    modals[index].classList.toggle("show-modal");
-  };
-  trigger.addEventListener("click", toggleModal);
- }
 */
-/*
-const btns = document.querySelectorAll("[dat-target");
-
-
-btns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    document.querySelector(btn.dataset.target).classList.add("active");
-  }
-
-  );
-});
 
 /* --------------- Monday ----------------- */
 
