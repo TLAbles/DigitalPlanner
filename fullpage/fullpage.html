@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planner</title>
+    <title>Planner</title> 
+    <link rel="icon" type ="image/png" href="favicon.png">
     <link rel="stylesheet" href="fullstyles.css">
     <link rel= "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
-    
+   
 </head>
 
 <body>
@@ -86,47 +87,136 @@ x
     
         <div id="habits"> 
           <div class="habitTracker">
-            <h2>Habits</h2>
-            <br>
+           
+<section class="card">
+  <div class ="table-responsive">
+    <div class ="header" id="HabitTitle">
+   <h2>Habit Tracker</h2>
+    
+   <!--
+   <input type="text" id="myHabit" placeholder= "New Habit"> 
+         <span onclick="GenerateHabit()" class="addBtn">Add</span>
+  -->
+
+         
+
+    <table id="habittable">
+   <thead>
+     <tr> <th colspan="7"><input type="text" id="myHabit" placeholder= "New Habit"> 
+        <!-- <span onclick="GenerateHabit()" class="addBtn">Add</span> -->
+        </th> </tr>
+    </thead>
+
+  <tr class= "habitDoW"> 
+      <td class ="Dow">M</td>
+      <td>T</td>
+      <td>W</td>
+      <td>T</td>
+      <td>F</td>
+      <td>S</td>
+      <td>S</td>
+      </tr>
+    <tr class = "dailycheck"> 
+     <td> <input type ="checkbox" id="habitDay"> </td>
+     <td> <input type ="checkbox" id="habitDay"> </td>
+     <td> <input type ="checkbox" id="habitDay"> </td>
+     <td> <input type ="checkbox" id="habitDay"> </td>
+     <td> <input type ="checkbox" id="habitDay"> </td>
+     <td> <input type ="checkbox" id="habitDay"> </td>
+     <td> <input type ="checkbox" id="habitDay"> </td>
+      </tr>
+</table>
+   
+     </div> 
+      
+     <div class ="table-responsive">
+   
+    <table id="habittable">
+   <thead>
+     <tr> <th colspan="7"><input type="text" id="myHabit" placeholder= "New Habit"> 
+         <span onclick="GenerateHabit()" class="addBtn">Add</span></th> </tr>
+    </thead>
+
+  <tr class= "habitDoW"> 
+      <td class ="Dow">M</td>
+      <td>T</td>
+      <td>W</td>
+      <td>T</td>
+      <td>F</td>
+      <td>S</td>
+      <td>S</td>
+      </tr>
+    <tr class = "dailycheck"> 
+     <td> <input type ="checkbox" id="habitDay"> </td>
+     <td> <input type ="checkbox" id="habitDay"> </td>
+     <td> <input type ="checkbox" id="habitDay"> </td>
+     <td> <input type ="checkbox" id="habitDay"> </td>
+     <td> <input type ="checkbox" id="habitDay"> </td>
+     <td> <input type ="checkbox" id="habitDay"> </td>
+     <td> <input type ="checkbox" id="habitDay"> </td>
+      </tr>
+</table>
+   
+     </div> 
+    
+     <table id="habittable">
+      <thead>
+        <tr> <th colspan="7"><input type="text" id="myHabit" placeholder= "New Habit"> 
+            <span onclick="GenerateHabit()" class="addBtn">Add</span></th> </tr>
+       </thead>
+   
+     <tr class= "habitDoW"> 
+         <td class ="Dow">M</td>
+         <td>T</td>
+         <td>W</td>
+         <td>T</td>
+         <td>F</td>
+         <td>S</td>
+         <td>S</td>
+         </tr>
+       <tr class = "dailycheck"> 
+        <td> <input type ="checkbox" id="habitDay"> </td>
+        <td> <input type ="checkbox" id="habitDay"> </td>
+        <td> <input type ="checkbox" id="habitDay"> </td>
+        <td> <input type ="checkbox" id="habitDay"> </td>
+        <td> <input type ="checkbox" id="habitDay"> </td>
+        <td> <input type ="checkbox" id="habitDay"> </td>
+        <td> <input type ="checkbox" id="habitDay"> </td>
+         </tr>
+   </table>
+
+   <div class ="table-responsive">
+    <table id="habittable">
+   <thead>
+     <tr> <th colspan="7"><input type="text" id="myHabit" placeholder= "New Habit"> 
+         <span onclick="GenerateHabit()" class="addBtn">Add</span></th> </tr>
+    </thead>
+
+  <tr class= "habitDoW"> 
+      <td class ="Dow">M</td>
+      <td>T</td>
+      <td>W</td>
+      <td>T</td>
+      <td>F</td>
+      <td>S</td>
+      <td>S</td>
+      </tr>
+    <tr class = "dailycheck"> 
+     <td> <input type ="checkbox" id="habitDay"> </td>
+     <td> <input type ="checkbox" id="habitDay"> </td>
+     <td> <input type ="checkbox" id="habitDay"> </td>
+     <td> <input type ="checkbox" id="habitDay"> </td>
+     <td> <input type ="checkbox" id="habitDay"> </td>
+     <td> <input type ="checkbox" id="habitDay"> </td>
+     <td> <input type ="checkbox" id="habitDay"> </td>
+      </tr>
+</table>
+   
+     </div> 
+
+      </section>
 
 
-            <!-- checkbox style  -->
-
-            <!--
-<div class= "habitContainer">
-<h3 class="habitTitle">something</h3>
-<div class="Day-row">
-  <div class="grid-cell">M</div>
-  <div class="grid-cell">T</div>
-  <div class="grid-cell">W</div>
-  <div class="grid-cell">Th</div>
-  <div class="grid-cell">F</div>
-  <div class="grid-cell">S</div>
-  <div class="grid-cell">S</div>
-</div>
-<div class="check-row">
-  <div class="grid-cell"> <input type="checkbox" checked id="checkbox" /> <label for="checkbox"></label></div>
-  <div class="grid-cell"> <input type="checkbox" checked id="checkbox" /> <label for="checkbox"></label></div>
-  <div class="grid-cell"> <input type="checkbox" checked id="checkbox" /> <label for="checkbox"></label></div>
-  <div class="grid-cell"> <input type="checkbox" checked id="checkbox" /> <label for="checkbox"></label></div>
-  <div class="grid-cell"> <input type="checkbox" checked id="checkbox" /> <label for="checkbox"></label></div>
-  <div class="grid-cell"> <input type="checkbox" checked id="checkbox" /> <label for="checkbox"></label></div>
-  <div class="grid-cell"> <input type="checkbox" checked id="checkbox" /> <label for="checkbox"></label></div>
-</div>
-
-</div>
--->
-
-
-            
-            <form class="add-habit">
-              <input class="habit" type="text" name="habit" placeholder="Enter New Habit" required/>
-              <input type="number" class= "reps" name="reps" placeholder="# of Repetitions"min="1" required/>
-              <input type="submit" class="submit" value="+ Add Habit" />
-            </form>
-            <ul class="habitsList">
-              <li>Let's GO!</li>
-            </ul>
              
           </div>
           </div>
