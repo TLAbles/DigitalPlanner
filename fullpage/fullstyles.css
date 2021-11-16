@@ -1,5 +1,4 @@
 
-
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background: linear-gradient(to top, #84ffff, #5f84ff);
@@ -27,17 +26,8 @@ body {
    
 }
 
-/*
-nav {
-    background: #a7ffeb;
-    grid-area: nav;
-    border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
-}
-*/
 
 #calendar {
-  /*  background: #84ffff;*/
     grid-area: calendar;
     border: 1px white solid; 
     border-radius: 1.75em;
@@ -341,14 +331,12 @@ h2 {
       position: absolute;
       right: 3px;
       bottom: 1px;
-      
-  
+    
     }
     
     .close:hover {
       color:#000;
     }
-
 
     /* Style the input */
    
@@ -387,17 +375,16 @@ h2 {
 /*  -----------habits ----------------*/
 #habits {
     display: flex;
-   /* background: #18ffff;*/
     grid-area: habits;
     border: 1px white solid; 
     border-radius: 1.75rem;
+    overflow-y: scroll;
     padding-top: var(--main-padding);
 }
 
 .habitTracker {
   flex: 1;
 }
-
 
 #habittable{
   cursor: pointer;
@@ -419,11 +406,9 @@ margin-bottom: .5rem;
 #habittable input {
   width: 100%;
   border-radius: 1.75rem ;
-  margin-top: .3rem;
-  
+  margin-top: .3rem;  
 
 }
-
 
  
 /*
@@ -454,7 +439,7 @@ input.habit {
 
       */
     /* Style the "Add habit" submit */
-  
+  /*
     input.submit {
 
       padding: 10px;
@@ -474,10 +459,11 @@ input.habit {
       background-color: #31feae;
     }
 
-
+*/
 /* ------------- daily / notes  ---------------*/
-/* open modal button styling */
 
+
+/* open modal button styling */
 
 .modalButton{
   margin-top: .25em;
@@ -562,7 +548,7 @@ input.habit {
 
 /*----------------Days and Notes --------------------- */
 #Monday {
-  /* background: #6fffd2; */
+
   grid-area: Monday;
   border: 1px white solid; 
   border-radius: 1.75rem;
@@ -570,7 +556,7 @@ input.habit {
 }
 
 #Tuesday {
-    /* background: #6fffd2; */
+ 
     grid-area: Tuesday;
     border: 1px white solid; 
     border-radius: 1.75rem;
@@ -578,7 +564,7 @@ input.habit {
 }
 
 #Wednesday {
-     /* background: #6fffd2; */
+
     grid-area: Wednesday;
     border: 1px white solid; 
     border-radius: 1.75rem;
@@ -586,7 +572,7 @@ input.habit {
 }
 
 #Thursday {
-     /* background: #6fffd2; */
+   
     grid-area: Thursday;
     border: 1px white solid; 
     border-radius: 1.75rem;
@@ -594,7 +580,7 @@ input.habit {
 }
 
 #Friday {
-     /* background: #6fffd2; */
+   
     grid-area: Friday;
     border: 1px white solid; 
     border-radius: 1.75rem;
@@ -602,7 +588,7 @@ input.habit {
 }
 
 #Saturday {
-   /* background: #6fffd2; */
+
     grid-area: Saturday;
     border: 1px white solid; 
     border-radius: 1.75rem;
@@ -610,7 +596,7 @@ input.habit {
 }
 
 #Sunday {
-    /* background: #6fffd2; */
+  
     grid-area: Sunday;
     border: 1px white solid; 
     border-radius: 1.75rem;
@@ -618,208 +604,13 @@ input.habit {
 }
 
 #Notes {
-   /* background: #18ffff; */
+
     grid-area: notes;
     border: 1px white solid; 
     border-radius: 1.75rem;
     padding-top: var(--main-padding);
 }
-
-
-/*-------------------Card Styling------------------*/
-/*
-
-.card {
-    display: flex;
-    flex-wrap: wrap;
-    overflow: auto;
-
-    box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1);
-    justify-items: left;
-    padding: 0;
-    margin: 0;
-    width: auto;
-    height: inherit;
-    cursor: pointer;
-    border-radius: 1.75rem;
-    animation: 1.25s ease-in-out 0ms 1 fadein;
- 
-    color: white;
-
     
-  }
-  */
-      /*to do list styling */
-  
-    /* Remove margins and padding from the list */
-  /*  ul {
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-      overflow: auto;
-      display: flex-grow;
-      width: 100%;
-    
-    
-      
-    }
-    */
-    /* Style the list items */
-    /*
-    
-    ul li {
-      cursor: pointer;
-      position: relative;
-      padding: .5rem;
-      height: inherit;
-      background: #eee;
-      font-size: 16px;
-      transition: 0.2s;
-      color: #fff;
-      border-radius: 1.75rem;
-      text-align: center;
-  */
-    
-      /* make the list items unselectable */
-   /*   -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-  */  
-    /* Set all odd list items to a different color (zebra-stripes) */
-  /*   ul li:nth-child(odd) {
-      background: #711b86;
-    }
-  
-    ul li:nth-child(even) {
-      background: #00057a;}
-    
-  */ 
-   /* Lighter background-color on hover */ 
-  
-  /*
-    ul li:hover:nth-child(odd) {
-      background: #d895e9;
-    }
-  
-    ul li:hover:nth-child(even) {
-      background: #8084ff;
-     
-    }
-*/
-    /* When clicked on, add a background color and strike out text */
-  /*  ul li.checked {
-      color: #000;
-      text-decoration: line-through;
-    }
-  
-    ul li.checked:nth-child(odd) {
-      background: #b290ff;
-    }
-  
-    ul li.checked:nth-child(even) {
-      background: #5f84ff;
-    }
- */ 
-    
-    /* Add a "checked" mark when clicked on */
-   /* ul li.checked::before {
-      content: '';
-      position: absolute;
-      border-color: #00ff9b;
-      border-style: solid;
-      border-width: 0 1px 2px 0;
-      top: 10px;
-      left: 16px;
-      transform: rotate(45deg);
-      height: 18px;
-      width: 7px;
-    }
-  */  
-    /* Style the close button */
-    /*
-    .close {
-      position: absolute;
-      right: 0;
-      top: 0;
-      padding: 12px 18px 12px 18px;
-    }
-    
-    .close:hover {
-      background-color: #00ff9b;
-      color:#000;
-      border-radius: 50%;
-    }
-   /* 
-    /* Style the header */
-   
-   /*
-    .header {
-      background-image: linear-gradient(to bottom, #711b86, #00057a);
-      padding: 0rem;
-      width:100%;
-      font-size:18px;
-      color: white;
-      text-align: center;
-      border-radius: 1.75rem;
-    }
-  */  
-    /* Clear floats after the header */
-   /*
-    .header:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    
-    /* Style the input */
-   /*
-    input { 
-    display: inline-block;
-      
-      margin: 0;
-      border: none;
-      border-radius: 1.75rem 0 0 1.75rem;
-      width: 75%;
-      padding: 10px;
-      float: left;
-      font-size: 16px;
-    }
-    */
-    /* Style the "Add" button */
-  /*
-    .addBtn {
-
-      padding: 10px;
-      width: 25%;
-      background: #b290ff;
-      color: #000;
-      float: left;
-      text-align: center;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s;
-      border-radius: 0 1.75rem 1.75rem 0;
-     
-    }
-    
-    .addBtn:hover {
-      background-color: #31feae;
-    }
-  */
-  /* ----------------HABIT TRACKER CONTAINER -----------------*/
-  /*
-  
-  .table-responsive
-    {
-      margin: 0;
-      padding: 0.25rem;
-      display: flex-grow;
-      width: 100%; 
-     
-    }
-   */ 
     /* ------- Individual habits styling ---------  */ 
    /*
    
@@ -837,12 +628,10 @@ input.habit {
       text-align: center;
       
   
-  
       table {
         table-layout: fixed;
       
       }
-  
     
       th {
         width: 100%;
@@ -905,60 +694,7 @@ input.habit {
         #Saturday {display: none;  }
         #Sunday {display: none;  }
         #Notes { display: none;  }
-    
+
           
           }
     
-
-/*
-
- @media screen and (min-width: 768px) {
-
-    .main-container 
-        display: grid;
-        height: 100vh;
-          grid-gap: 0.2rem;
-        font-weight: 800;
-        text-transform: uppercase;
-        font-size: 16px;
-        color: red;
-        text-align: center;
-        border: 2px solid purple;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows:  1.5fr 1.5fr 1.5fr 1.5fr; 
-        grid-template-areas: 
-       
-        "calendar calendar Monday Tuesday"
-        "calendar calendar Wednesday Thursday"
-        "sidebar sidebar Friday Saturday"
-        "sidebar sidebar Sunday notes"
-        ;
-
-      
-      }
-
-/*
-@media screen and (min-width: 600px) {
-
-        .main-container {
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-template-areas: 
-            "calendar"
-            "sidebar";
-        }
-         
-    
-    #Monday { display: none; }
-    #Tuesday { display: none; }
-    #Wednesday { display: none;  }
-    #Thursday {display: none;  }
-    #Friday { display: none;   }
-    #Saturday {display: none;  }
-    #Sunday {display: none;  }
-    #notes { display: none;  }
-
-
-}
-
-*/
