@@ -5,26 +5,33 @@ body {
 }
 
 
+ /* mobile first display */
+ 
 .main-container {
-    display: grid;
-    height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows:  1.5fr 1.5fr 1.5fr 1.5fr; 
-    grid-template-areas: 
-   
-    "calendar calendar Monday Tuesday"
-    "calendar calendar Wednesday Thursday"
-    "toDo habits Friday Saturday"
-    "toDo habits Sunday notes"
-    ;
-    grid-gap: 0.2rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-   
+  height: 100vh;
+  display: grid;
+  grid-gap: 0.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 
+  "calendar calendar"
+  "toDo habits";
 }
+
+#Monday { display: none; }
+#Tuesday { display: none; }
+#Wednesday { display: none;  }
+#Thursday {display: none;  }
+#Friday { display: none;   }
+#Saturday {display: none;  }
+#Sunday {display: none;  }
+#Notes { display: none;  }
+
 
 
 #calendar {
@@ -647,7 +654,9 @@ input.habit {
   
   */
 
- @media screen and (max-width: 968px) {
+/* tablet size media query */
+
+ @media screen and (min-width: 768px) {
         .main-container {
             height: auto;
             grid-template-columns: 1fr 1fr;
@@ -664,37 +673,42 @@ input.habit {
             "toDo habits"
             "notes notes";
         }
+
+
+#Monday { display: block; }
+#Tuesday { display: block; }
+#Wednesday { display: block;  }
+#Thursday {display: block;  }
+#Friday { display: block;   }
+#Saturday {display: block;  }
+#Sunday {display: block;  }
+#Notes { display: block;  
     }
     
-
-
-    @media screen and (max-width: 600px) {
-
-        .main-container {
-            height: 100vh;
-            display: grid;
-            grid-gap: 0.2rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            font-size: 16px;
-            color: white;
-            text-align: center;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: repeat(2, 1fr);
-            grid-template-areas: 
-            "calendar calendar"
-            "toDo habits";
-        }
         
-        #Monday { display: none; }
-        #Tuesday { display: none; }
-        #Wednesday { display: none;  }
-        #Thursday {display: none;  }
-        #Friday { display: none;   }
-        #Saturday {display: none;  }
-        #Sunday {display: none;  }
-        #Notes { display: none;  }
+/* large screen media query */
+ @media screen and (min-width: 992px) {
 
-          
-          }
-    
+.main-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows:  1.5fr 1.5fr 1.5fr 1.5fr; 
+  grid-template-areas: 
+ 
+  "calendar calendar Monday Tuesday"
+  "calendar calendar Wednesday Thursday"
+  "toDo habits Friday Saturday"
+  "toDo habits Sunday notes"
+  ;
+  
+  grid-gap: 0.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+ 
+}
+ }
+}
