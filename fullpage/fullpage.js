@@ -130,7 +130,7 @@ function newElement() {
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
-    alert("You must write something!");
+    alert("Write something!");
   } else {
     document.getElementById("myUL").appendChild(li);
   }
@@ -151,8 +151,8 @@ function newElement() {
 }
 
 /* -----------------------------------HABIT TRACKER---------------------------------*/ 
-
 /*
+
 const addHabits = document.querySelector(".add-habit");
 const habitsList = document.querySelector('.habitsList');
 const habits = JSON.parse(localStorage.getItem("habits")) || [];
@@ -234,8 +234,33 @@ habitsList.addEventListener("click", markCompleted);
 habitsList.addEventListener("click", deleteHabit);
 
 listHabits(habits, habitsList);
-
 */
+/*
+// ---------------MODAL ---------------------//
+ 
+const modalButton = document.getElementsByClassName("modalButton");
+const modalArray = Array.from(modalButton).entries();
+const modals = document.getElementsByClassName("modal");
+
+// Then use `for...of`-loop with the index of each item in `triggerArray` for listening to a click event which toggles each modal to open and close
+for (let [index, modalButton] of modalArray) {
+  const toggleModal => () {
+    modals[index].classList.toggle("show-modal");
+  };
+  trigger.addEventListener("click", toggleModal);
+ }
+*/
+/*
+const btns = document.querySelectorAll("[dat-target");
+
+
+btns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.querySelector(btn.dataset.target).classList.add("active");
+  }
+
+  );
+});
 
 /* --------------- Monday ----------------- */
 
@@ -255,6 +280,14 @@ mon_btn.onclick = function() {
 function monFunction() {
   var MonNotesDiv = document.getElementById("MonNotes").value;
   document.getElementById("Mondaytext").innerHTML = MonNotesDiv;
+}
+
+//Close Modal with button
+
+var mon_close = document.getElementById("Mon_Close");
+
+mon_close.onclick = function() {
+  monday_modal.style.display = "none";
 }
 
  
@@ -279,6 +312,13 @@ function tueFunction() {
 }
 
 
+//Close Modal with button
+
+var tue_close = document.getElementById("Tue_Close");
+
+tue_close.onclick = function() {
+  tuesday_modal.style.display = "none";
+}
 /* --------------- Wednesday ----------------- */
 
 // Get the modal
@@ -300,6 +340,13 @@ function wedFunction() {
 }
 
  
+//Close Modal with button
+
+var wed_close = document.getElementById("Wed_Close");
+
+wed_close.onclick = function() {
+  wednesday_modal.style.display = "none";
+}
 /* --------------- Thursday ----------------- */
 
 // Get the modal
@@ -321,6 +368,13 @@ function thFunction() {
 }
 
 
+//Close Modal with button
+
+var th_close = document.getElementById("Th_Close");
+
+th_close.onclick = function() {
+  thursday_modal.style.display = "none";
+}
 /* --------------- Friday ----------------- */
 
 // Get the modal
@@ -341,6 +395,13 @@ function friFunction() {
   document.getElementById("Fridaytext").innerHTML = FriNotesDiv;
 }
 
+//Close Modal with button
+
+var fri_close = document.getElementById("Fri_Close");
+
+fri_close.onclick = function() {
+  friday_modal.style.display = "none";
+}
  
 /* --------------- Saturday ----------------- */
 
@@ -363,6 +424,13 @@ function satFunction() {
 }
 
 
+//Close Modal with button
+
+var sat_close = document.getElementById("Sat_Close");
+
+sat_close.onclick = function() {
+  saturday_modal.style.display = "none";
+}
 /* --------------- Sunday ----------------- */
 
 // Get the modal
@@ -383,7 +451,13 @@ function sunFunction() {
   document.getElementById("Sundaytext").innerHTML = SunNotesDiv;
 }
 
- 
+//Close Modal with button
+
+var sun_close = document.getElementById("Sun_Close");
+
+sun_close.onclick = function() {
+  sunday_modal.style.display = "none";
+}
 /* --------------- Notes ----------------- */
 
 
@@ -405,6 +479,13 @@ function noteFunction() {
   document.getElementById("Notetext").innerHTML = NoteNotesDiv;
 }
 
+//Close Modal with button
+
+var note_close = document.getElementById("Note_Close");
+
+note_close.onclick = function() {
+  note_modal.style.display = "none";
+}
 
 // When the user clicks anywhere outside of the modal, close it
 
